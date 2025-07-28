@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 function App() {
   const [todos, setTodos] = useState([
@@ -23,6 +23,10 @@ function App() {
   const deleteTodo = (id) => {
     console.log('deleting...', id);
   }
+
+  const sort = useMemo(() => {
+    return todos.map((todo) => { todo.id }).sort();
+  }, [todos]);
 
   return (
     <div className='todo-app'>
