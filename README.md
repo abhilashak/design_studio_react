@@ -1,6 +1,6 @@
-# Design Studio React
+# Bug Tracker Rails React
 
-A modern design studio web application built with Rails 8 and React, featuring a clean architecture for creative project management and design workflows.
+A modern bug tracking application built with Rails 8 and React, providing a comprehensive solution for managing software bugs through their lifecycle from creation to production deployment.
 
 ## 🛠️ Tech Stack
 
@@ -13,11 +13,19 @@ A modern design studio web application built with Rails 8 and React, featuring a
 
 ## 🚀 Features
 
-- Modern React-based user interface
-- Fast JavaScript bundling with esbuild
-- PostgreSQL database for robust data management
-- Responsive design for creative workflows
-- Clean separation between Rails API and React frontend
+- **User Authentication:** Secure sign-in system for team members
+- **Bug Management:** Create and track bugs throughout their lifecycle
+- **Status Workflow:** Complete bug status management:
+  - **New:** Initial bug creation
+  - **Assigned:** Bug assigned to developer
+  - **In Progress:** Developer actively working on the bug
+  - **Done:** Bug fix completed
+  - **QA:** Bug fix under quality assurance testing
+  - **Production:** Bug fix deployed to production
+- **Modern React-based user interface**
+- **Fast JavaScript bundling with esbuild**
+- **PostgreSQL database for robust data management**
+- **Responsive design for development workflows**
 
 ## 📋 Prerequisites
 
@@ -31,7 +39,7 @@ A modern design studio web application built with Rails 8 and React, featuring a
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd design_studio_react
+   cd bug_tracker_rails_react
    ```
 
 2. **Install dependencies**
@@ -60,10 +68,10 @@ A modern design studio web application built with Rails 8 and React, featuring a
 
 ## 🏗️ Architecture
 
-- **Rails Backend:** API endpoints and server-side logic
+- **Rails Backend:** API endpoints and server-side logic for bug management
 - **React Frontend:** Component-based UI in `app/javascript/components/`
 - **esbuild:** Fast JavaScript bundling and hot reloading
-- **PostgreSQL:** Production-ready database
+- **PostgreSQL:** Production-ready database for bug tracking data
 
 ## 📁 Project Structure
 
@@ -73,8 +81,9 @@ app/
 │   ├── application.js     # Main entry point
 │   └── components/        # React components
 ├── controllers/           # Rails controllers
-├── models/               # Rails models
-└── views/                # Rails views and layouts
+├── models/               # Rails models (User, Bug)
+├── views/                # Rails views and layouts
+└── assets/               # Stylesheets and images
 
 config/                   # Rails configuration
 public/                   # Static assets
@@ -98,4 +107,18 @@ rails assets:precompile
 # Deploy with Kamal
 kamal deploy
 ```
+
+## 📝 Bug Workflow
+
+1. **Create Bug:** Users can create new bugs with descriptions and priority levels
+2. **Assign Bug:** Bugs can be assigned to team members
+3. **Update Status:** Track progress through the defined status workflow
+4. **Monitor Progress:** Real-time updates on bug status changes
+5. **Complete Cycle:** Bugs move from creation to production deployment
+
+## 🔐 Authentication
+
+- Secure user authentication system
+- Role-based access control
+- Session management for team collaboration
 
